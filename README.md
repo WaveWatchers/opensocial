@@ -1,4 +1,4 @@
-open-social
-===========
+OpenSocial projects/gadgets
+==========
 
-Open Social Projects (Gadgets) powered by Wave Watchers
+OpenSocial Projects (Gadgets) powered by Wave Watchers
