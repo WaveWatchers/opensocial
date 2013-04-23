@@ -109,7 +109,7 @@
         </div> 
         
         <div id="quotes">
-	        <script src="https://c9.io/alfredoabambres/opensocial/workspace/quotes.js" type="text/javascript"></script>
+	        <script src="https://raw.github.com/WaveWatchers/opensocial/master/quotes.js" type="text/javascript"></script>
         </div>
 
         <p id="slogan"><big>&copy;</big> <a href="http://www.wavewatchers.org" target="_blank">Social Gadget</a> by <a href="http://www.wavewatchers.org" target="_blank">Wave Watchers</a></p> 
