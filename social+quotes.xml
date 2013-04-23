@@ -1,0 +1,33 @@
+<Module>
+<ModulePrefs title="Social Toolbox+: FEEDBACK + INLINE ANNOTATIONS + SHARE by Merakian.com" title_url="http://www.merakian.com/apps" description="Add SOCIAL FEEDBACK (ex. Like, +1...) with INLINE ANNOTATIONS + SHARE (ex. Google+, Facebook, Twitter...) Buttons." screenshot="" thumbnail="" author="Merakian" author_email="info@merakian.com" height="450"/>
+<!--  PAGE/SITE INFO  -->
+<UserPref name="URL" display_name="Page URL/Address" required="true" default_value="http://www.merakian.com"/>
+<UserPref name="TITLE" display_name="Page Title" required="true" default_value="Merakian"/>
+<UserPref name="SITENAME" display_name="Human Readable Site Name" required="true" default_value="Merakian"/>
+<UserPref name="DESCRIPTION" display_name="Page Description" required="true" default_value="The Human Side Of Life!"/>
+<UserPref name="IMAGE" display_name="Screenshot" required="false" default_value="http://www.merakian.com/avatar-merakian-symbol-64x64.png"/>
+<UserPref name="TYPE" display_name="Page Type/Category" required="false" default_value="Organization"/>
+<!--  SHARE  -->
+<UserPref name="SHARE_TXT" display_name="SHARE: Call To Action Text" required="false" default_value="Partilha esta página no"/>
+<UserPref name="SHARE_TXT_COLOR" display_name="SHARE: Call To Action Color" required="false" default_value="Red"/>
+<UserPref name="SHARE_ICON_SIZE" display_name="SHARE: Icon Size" required="true" default_value="32" datatype="enum">
+<EnumValue value="default" display_value="16px"/>
+<EnumValue value="addthis_32x32_style" display_value="32px"/>
+</UserPref>
+<!--  OTHER SETTINGS  -->
+<UserPref name="LANG" display_name="Global Language (ex. en, pt...)" required="true" default_value="pt"/>
+<UserPref name="TWITTER_ID" display_name="Twitter ID/Username" required="true" default_value="merakian"/>
+<UserPref name="FB_APP_ID" display_name="Facebook App ID" required="true" default_value="371781819510460"/>
+<UserPref name="FB_ADMINS" display_name="Facebook App Admins" required="false" default_value=""/>
+<UserPref name="FB_LANG" display_name="Facebook Language (ex. en_US, pt_PT...)" required="true" default_value="pt_PT"/>
+<UserPref name="GOOG_LANG" display_name="Google+ Language (ex. en-US, pt-PT...)" required="true" default_value="pt-PT"/>
+<UserPref name="GA_PROPERTY" display_name="Google Analytics Property ID" required="true" default_value="UA-15054652-9"/>
+<UserPref name="ADDTHIS_ID" display_name="AddThis.com User ID" required="true" default_value="ra-4e416c96130dbe2c"/>
+<UserPref name="DATA_WIDTH" display_name="Each Annotation Module Width" required="true" default_value="450"/>
+<UserPref name="BG_COLOR" display_name="Background Color" required="true" default_value="white"/>
+<Content type="html">
+<![CDATA[
+<meta itemprop="name" content="__UP_TITLE__"> <meta itemprop="description" content="__UP_DESCRIPTION__"> <meta itemprop="image" content="__UP_IMAGE__"> <meta property="og:title" content="__UP_TITLE__" /> <meta property="og:type" content="__UP_TYPE__" /> <meta property="og:url" content="__UP_URL__" /> <meta property="og:image" content="__UP_IMAGE__" /> <meta property="og:site_name" content="__UP_SITENAME__" /> <meta property="og:description" content="__UP_DESCRIPTION__"/> <meta property="fb:app_id" content="__UP_FB_APP_ID__" /> <meta property="fb:admins" content="__UP_FB_ADMINS__" /> <style> body { background-color: __UP_BG_COLOR__; margin: 0; padding: 0; } #social-feedback { clear: both; white-space: nowrap; width: 100%; } #social-feedback .google-plus { display: inline-block; width: __UP_DATA_WIDTH__px; margin-bottom: 1em; float:left; } #social-feedback .g-plusone, #social-feedback .g-plus { vertical-align: top !important; } #social-feedback .fb-like, #fb-root { display: inline-block; vertical-align: top !important; float:left; } #social-share { clear: both; margin-top: 8em; text-align: center; } #social-share p { color: __UP_SHARE_TXT_COLOR__; vertical-align: middle; } #social-share div { display: inline-block; } #slogan { clear: both; position: absolute; bottom: 0; left: 0; padding-top: 5px; color: silver; font-size: 70%; } #slogan a { color: silver; } </style> </head> <body> <div id="social"> <div id="social-feedback"> <!-- GOOGLE+ --> <div class="google-plus"> <div class="g-plusone" data-annotation="none" data-href="__UP_URL__"></div> <div class="g-plus" data-action="share" data-annotation="inline" data-height="24" data-href="__UP_URL__"></div> <script type="text/javascript"> window.___gcfg = {lang: '__UP_GOOG_LANG__'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script> </div> <!-- GOOGLE+: END --> <!-- FACEBOOK --> <div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/__UP_FB_LANG__/all.js#xfbml=1&appId=__UP_FB_APP_ID__"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script> <div class="fb-like" data-href="__UP_URL__" data-send="true" data-width="__UP_DATA_WIDTH__" data-show-faces="true"></div> <!-- FACEBOOK: END --> </div> <div style="clear:both;">&nbsp;</div> <div id="social-share"> <p>__UP_SHARE_TXT__</p> <div class="addthis_toolbox addthis_default_style __UP_SHARE_ICON_SIZE__"> <a class="addthis_button_email"></a> <a class="addthis_button_google_plusone_share"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a> <a class="addthis_button_stumbleupon"></a> <a class="addthis_button_preferred_1"></a> <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a> </div> </div> </div> <p id="slogan"><big>&copy;</big> <a href="http://www.merakian.com/apps" target="_blank">Social Gadget</a> by <a href="http://www.merakian.com" target="_blank">Merakian</a></p> <!-- AddThis Analytics BEGIN --> <script type="text/javascript"> var addthis_share = { url: '__UP_URL__', } var addthis_config = { ui_language: '__UP_LANG__', data_track_addressbar: true, data_ga_property: '__UP_GA_PROPERTY__', data_ga_social: true, }; </script> <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=__UP_ADDTHIS_ID__"></script> <!-- AddThis Analytics END -->
+]]>
+</Content>
+</Module>
