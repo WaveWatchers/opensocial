@@ -45,12 +45,13 @@
         <meta itemprop="name" content="__UP_TITLE__"> 
         <meta itemprop="description" content="__UP_DESCRIPTION__"> 
         <meta itemprop="image" content="__UP_IMAGE__"> 
-        <meta property="og:title" content="__UP_TITLE__" /> 
+        
         <meta property="og:type" content="__UP_TYPE__" /> 
         <meta property="og:url" content="__UP_URL__" /> 
-        <meta property="og:image" content="__UP_IMAGE__" /> 
         <meta property="og:site_name" content="__UP_SITENAME__" /> 
+        <meta property="og:title" content="__UP_TITLE__" /> 
         <meta property="og:description" content="__UP_DESCRIPTION__"/>
+        <meta property="og:image" content="__UP_IMAGE__" />
         
         <style> 
         
@@ -112,15 +113,23 @@
             <span id="google-plus"> 
                 <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="__UP_URL__"></div> 
                 <div class="g-plusone" data-annotation="inline" data-href="__UP_URL__"></div> 
-                <script type="text/javascript"> window.___gcfg = {lang: '__UP_GOOG_LANG__'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
+                <script type="text/javascript"> 
+                    window.___gcfg = {lang: '__UP_GOOG_LANG__'}; 
+                    (function() { 
+                        var po = document.createElement('script'); 
+                        po.type = 'text/javascript'; 
+                        po.async = true; 
+                        po.src = 'https://apis.google.com/js/plusone.js'; 
+                        var s = document.getElementsByTagName('script')[0]; 
+                        s.parentNode.insertBefore(po, s); 
+                    })(); 
+                </script>
             </span> 
             <!-- GOOGLE+: END -->
             
             <span id="addthis_toolbox" class="addthis_toolbox addthis_default_style">
                 <a class="addthis_counter addthis_pill_style"></a>
-                <a class="addthis_button_tweet" tw:text="__UP_DESCRIPTION__"></a>
-                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                <!-- <a class="addthis_button_google_plusone" addthis:g:plusone:size="medium"></a> -->
+                <a class="addthis_button_tweet" tw:via="__UP_TWITTER_ID__"></a>
             </span>
                         
         </div> 
@@ -145,7 +154,9 @@
         <!-- AddThis Analytics BEGIN --> 
         <script type="text/javascript"> 
             var addthis_share = { 
-                url: '__UP_URL__', 
+                url: '__UP_URL__',
+                title: '__UP_TITLE__',
+                description: '__UP_DESCRIPTION__',
             } 
             var addthis_config = { 
                 ui_language: '__UP_LANG__',
