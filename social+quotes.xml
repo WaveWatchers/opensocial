@@ -56,26 +56,38 @@
         
             body { background-color: __UP_BG_COLOR__; margin: 0; padding: 0; }
             
-            #google-plus, #google-plus div:nth-of-type(1), #social .addthis_toolbox a {
-                margin-bottom: 20px !important;
+            #google-plus, #google-plus div:nth-of-type(1), #addthis_toolbox a {
+                display: inline-block; margin-bottom: 20px !important;
             }
             
-            #social .addthis_toolbox a {
+            #addthis_toolbox {
+                float:right;
+                width: 130px;
+            }
+                
+            #addthis_toolbox a {
                 display: inline-block;
             }
             
-            #social .addthis_toolbox>a:nth-of-type(1) {
+            #addthis_toolbox>a:nth-of-type(1) {
                 margin-right: 30px;
             }
             
             #quotes { 
                 position: absolute;
-                top: 50%;
+                top: 45%;
                 width: 100%;
                 text-align: center;
                 font-family: georgia, serif;
-                font-size: 200%;
+                font-size: 200%; font-style: italic;
                 color: __UP_QUOTES_FONT_COLOR__;
+            }
+            
+            @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+                #quotes {
+                    top: 60%;
+                    font-size: 150%;
+                }
             }
             
             #credits { clear: both; position: absolute; bottom: 0; left: 0; padding-top: 5px; font-size: 70%; } 
@@ -92,21 +104,21 @@
         </div>
     
         <div id="social"> 
-        
+            
             <!-- GOOGLE+ --> 
-            <div id="google-plus"> 
-                <div class="g-plusone" data-annotation="none" data-href="__UP_URL__"></div> 
-                <div class="g-plus" data-action="share" data-annotation="inline" data-height="24" data-href="__UP_URL__"></div> 
+            <span id="google-plus"> 
+                <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="__UP_URL__"></div> 
+                <div class="g-plusone" data-annotation="inline" data-href="__UP_URL__"></div> 
                 <script type="text/javascript"> window.___gcfg = {lang: '__UP_GOOG_LANG__'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
-            </div> 
+            </span> 
             <!-- GOOGLE+: END -->
-        
-            <div id="addthis_toolbox" class="addthis_toolbox addthis_default_style">
+            
+            <span id="addthis_toolbox" class="addthis_toolbox addthis_default_style">
                 <a class="addthis_counter addthis_pill_style"></a>
                 <a class="addthis_button_tweet"></a>
                 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
                 <!-- <a class="addthis_button_google_plusone" addthis:g:plusone:size="medium"></a> -->
-            </div>
+            </span>
                         
         </div> 
 
