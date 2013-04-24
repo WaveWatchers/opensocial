@@ -36,7 +36,7 @@ var Q = Quotation.length;
 var whichQuotation=Math.round(Math.random()*(Q-1));
 
 function showQuotation() {
-    document.write("«" + Quotation[whichQuotation] + "»");
+    document.write(Quotation[whichQuotation]);
 }
 
 showQuotation();
