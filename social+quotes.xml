@@ -88,6 +88,9 @@
                     top: 60%;
                     font-size: 150%;
                 }
+                #addthis_toolbox {
+                    float:left;
+                }
             }
             
             #credits { clear: both; position: absolute; bottom: 0; left: 0; padding-top: 5px; font-size: 70%; } 
@@ -115,7 +118,7 @@
             
             <span id="addthis_toolbox" class="addthis_toolbox addthis_default_style">
                 <a class="addthis_counter addthis_pill_style"></a>
-                <a class="addthis_button_tweet"></a>
+                <a class="addthis_button_tweet" tw:text="__UP_DESCRIPTION__"></a>
                 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
                 <!-- <a class="addthis_button_google_plusone" addthis:g:plusone:size="medium"></a> -->
             </span>
@@ -145,11 +148,12 @@
                 url: '__UP_URL__', 
             } 
             var addthis_config = { 
-                ui_language: '__UP_LANG__', 
-                data_track_addressbar: true, 
+                ui_language: '__UP_LANG__',
                 data_ga_property: '__UP_GA_PROPERTY__', 
                 data_ga_social: true, 
-            };         
+            };
+            addthis_config.data_track_addressbar = false;
+            addthis_config.data_track_clickback = false;
         </script> 
         <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=__UP_ADDTHIS_ID__"></script> 
         <!-- AddThis Analytics END -->
