@@ -34,7 +34,7 @@
     <UserPref name="LANG" display_name="Global Language (ex. en, pt...)" required="true" default_value="en"/>
     <UserPref name="GOOG_LANG" display_name="Google+ Language (ex. en-US, pt-PT...)" required="true" default_value="en-US"/>
     
-    <UserPref name="TWITTER_ID" display_name="Twitter ID/Username" required="true" default_value="gwavewatchers"/>
+    <UserPref name="TWITTER_ID" display_name="Twitter ID/Username" required="true" default_value="thewavewatchers"/>
     
     <!--  ADDTHIS + Google Analytics -->
     <UserPref name="ADDTHIS_ID" display_name="AddThis.com User ID" required="true" default_value="ra-51771e375719221b"/>
